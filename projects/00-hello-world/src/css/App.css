@@ -1,0 +1,66 @@
+.tw-followCard {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+    padding: 5px;
+    height: 100%;
+}
+
+.tw-followCardHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 180px;
+    gap: 10px;
+}
+
+.tw-followCardHeader img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+.tw-followCardHeader h2 {
+    margin: 0;
+    margin: 5px;
+    color: red;
+}
+
+.tw-followCardAsideButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.tw-followCardAsideButton button {
+    margin: 5px;
+    color: red;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 1px solid red;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tw-followCardAsideButton button:hover{
+    color: blue;
+    border: 1px solid blue;
+    transition: color 0.3s, border 0.3s;
+}
+
+.tw-followCard-button .tw-followCard-button-stop-following {
+    display: none;
+}
+
+.tw-followCard-button.following:hover .tw-followCard-button-stop-following {
+    display: block;
+}
+
+.tw-followCard-button.following:hover .tw-followCard-button-text {
+    display: none;
+}
+
