@@ -14,12 +14,25 @@ body {
   gap: 5px;
 }
 
-.game-container section{
-  margin-top: 10px;
+.game-container-squares {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  cursor: pointer;
 }
 
-.game-container-squares {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
+#game-container-reset-button {
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+  margin-bottom: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+#game-container-turn-message {
+  margin-top: 20px;
+  font-size: 20px;
 }

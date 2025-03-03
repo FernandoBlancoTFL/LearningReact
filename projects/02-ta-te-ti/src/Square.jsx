@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-export function Square({children, changeTurn}){
+export function Square({children, changeTurn, initialTurn}){
 
-    const [state, setState] = useState(null);
+    const [state, setState] = useState(initialTurn);
 
     const setSymbol = () => {
         if(state == null){
