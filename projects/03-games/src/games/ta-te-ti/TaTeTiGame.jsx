@@ -4,7 +4,7 @@ import { checkWinner, checkEndGame } from './logic/checkWinner.js';
 import { restartGameInLocalStorage, saveGameInLocalStorage } from './logic/storage/storage.js';
 import { TURNS } from './constants.js'
 import React from 'react';
-import './css/game-container.css'
+import './css/index.css'
 import './css/ta-te-ti.css'
 
 export function TaTeTiGame() {
@@ -55,7 +55,6 @@ export function TaTeTiGame() {
       </div>
       <section id='game-container-turn-message'>Turno: {turn}</section>
     </section>
-    
   )
 }
 

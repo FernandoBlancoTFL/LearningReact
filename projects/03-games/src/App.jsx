@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { TaTeTiGame } from './games/ta-te-ti/TaTeTiGame.jsx'
 import './css/App.css'
+import { Connect4 } from './games/connect4/Connect4.jsx';
 
 function App() {
   const [gameSelected, setGameSelected] = useState(null);
@@ -13,8 +14,17 @@ function App() {
   }
 
   const handleClickStartGame = () => {
-    gameSelected ? setGameStart(!gameStart) : null;
-    setGameSelected(null);
+    setGameStart(!gameStart);
+  }
+
+  const renderGame = () => {
+    if(gameSelected === 'Ta-Te-Ti'){
+      return <TaTeTiGame></TaTeTiGame>
+    } else if(gameSelected === 'connect4'){
+      return <Connect4></Connect4>
+    } else if(gameSelected === 'touchpoint'){
+      return <TaTeTiGame></TaTeTiGame>
+    }
   }
 
   return (
@@ -23,7 +33,7 @@ function App() {
         {
           !gameStart && (
             <section className='gm-pickgame'>
-            <h3>Click en un juego para jugar:</h3>
+            <h3>Selecciona un juego:</h3>
             <div className='gm-pickgame-selection'>
               <div 
                 className={gameSelected === 'Ta-Te-Ti' ? `gm-pickgame-selection-tateti ${selectedButtonClass}`: 'gm-pickgame-selection-tateti'} 
@@ -31,13 +41,13 @@ function App() {
                 Ta-Te-Ti
               </div>
               <div 
-                className={gameSelected === 'Cuatro en raya' ? `gm-pickgame-selection-connect4 ${selectedButtonClass}`: 'gm-pickgame-selection-connect4'} 
-                onClick={() => {setGameSelected('Cuatro en raya')}}>
+                className={gameSelected === 'connect4' ? `gm-pickgame-selection-connect4 ${selectedButtonClass}`: 'gm-pickgame-selection-connect4'} 
+                onClick={() => {setGameSelected('connect4')}}>
                 Cuatro en raya
               </div>
               <div 
-                className={gameSelected === 'Atrapa puntos' ? `gm-pickgame-selection-touchpoint ${selectedButtonClass}`: 'gm-pickgame-selection-touchpoint'} 
-                onClick={() => {setGameSelected('Atrapa puntos')}}>
+                className={gameSelected === 'touchpoint' ? `gm-pickgame-selection-touchpoint ${selectedButtonClass}`: 'gm-pickgame-selection-touchpoint'} 
+                onClick={() => {setGameSelected('touchpoint')}}>
                 Atrapa puntos
               </div>
             </div>
@@ -52,9 +62,7 @@ function App() {
               <button className='gm-playgame-button' onClick={() => {setGameStart(!gameStart)}}>
                 Seleccionar otro juego
               </button>
-              <h2>{`Jugando: ${gameSelected}`}</h2>
-              {/* {TODO: colocar el juego correspondiente según la selección del usuario} */}
-              <TaTeTiGame></TaTeTiGame>
+              {renderGame()}
             </section>
           )
         }
