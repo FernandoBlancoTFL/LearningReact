@@ -14,7 +14,7 @@ export const WIN_COMBOS = [
     [1, 5, 9, 13],
     [2, 6, 10, 14],
     [3, 7, 11, 15]
-  ];
+];
 
 export const BOARD_LIMITS_LEFT = [0, 5, 10, 15];
 export const BOARD_LIMITS_RIGHT = [4, 9, 14, 19];

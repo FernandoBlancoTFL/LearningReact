@@ -17,10 +17,10 @@ export const checkWinner = (newBoard) => {
 
 export const setItemOnBoard = (newBoard, index, turn) => {
     for(let i in BOTTOM_ROW){
-        for(let newIndex = index; newIndex <= BOTTOM_ROW[4]; newIndex+=5){
+        for(let newIndex = index; newIndex <= BOTTOM_ROW[BOTTOM_ROW.length-1]; newIndex+=BOTTOM_ROW.length){
             if(newIndex === BOTTOM_ROW[i]){
                 while(newBoard[newIndex] != null){
-                    newIndex-=5;
+                    newIndex-=BOTTOM_ROW.length;
                 }
                 if(newBoard[newIndex] == null){
                     newBoard[newIndex] = turn;
@@ -48,7 +48,7 @@ export const checkWinnerAlternative = (newBoard, newIndex) => {
     const currentPosition = newIndex;
     const leftMove = currentPosition - 1;
     const rightMove = currentPosition + 1;
-    const downMove = currentPosition + 5;
+    const downMove = currentPosition + BOTTOM_ROW.length;
 
     applyMovement(currentPosition, rightMove, newBoard)
     applyMovement(currentPosition, leftMove, newBoard)
@@ -73,8 +73,8 @@ const applyMovement = (prevPosition, movement, newBoard) => {
         nextMove = currentPosition - 1;
     } else if(result == -1){
         nextMove = currentPosition + 1;
-    } else if(result == -5){
-        nextMove = currentPosition + 5;
+    } else if(result == -BOTTOM_ROW.length){
+        nextMove = currentPosition + BOTTOM_ROW.length;
     }
 
     if((newBoard[currentPosition] != newBoard[previousPosition])){
