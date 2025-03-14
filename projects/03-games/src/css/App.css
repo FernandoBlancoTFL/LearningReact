@@ -34,6 +34,13 @@ body {
   transition: border-color 0.25s;
 }
 
+.gm-pickgame-selection div img{
+  border-radius: 15px;
+  padding: 5px;
+  width: 120px;
+  height: 120px;
+}
+
 .gm-pickgame-selection div:hover {
   border: 2px solid #646cff;
 }
@@ -54,7 +61,7 @@ body {
 }
 
 .gm-playgame-button {
-  margin: 20px 10px;
+  margin: 10px 10px;
 }
 
 

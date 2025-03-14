@@ -1,0 +1,12 @@
+.gm-section-point {
+    width: 60px;
+    height: 60px;
+}
+
+.active-node {
+    border: 1px solid white;
+}
+
+.no-active-node {
+    border: none;
+}

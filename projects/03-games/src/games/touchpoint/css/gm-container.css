@@ -1,0 +1,56 @@
+body.no-cursor {
+    cursor: none;
+}
+
+.gm-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#gm-section-points {
+    display: flex;
+    flex-direction: row;
+}
+
+.gm-section-points-point {
+    text-align: center;
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.gm-section-timer {
+    text-align: center;
+    font-size: 28px;
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#gm-section-playground {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 380px;
+    /* border: 1px solid blue; */
+}
+
+#gm-section-buttons {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+

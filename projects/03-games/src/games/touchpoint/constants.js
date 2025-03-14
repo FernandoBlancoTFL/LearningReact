@@ -1,0 +1,4 @@
+export const INITIAL_TIME_STRING = '00:05:00';
+export const FINAL_TIME_STRING = '00:00:00';
+export const INITIAL_TIME_IN_MILLISECONDS = 5000;
+
