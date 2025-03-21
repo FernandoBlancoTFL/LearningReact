@@ -1,0 +1,25 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 15px;
+    gap: 10px;
+}
+
+section img {
+    max-width: 400px;
+    height: auto;
+}
