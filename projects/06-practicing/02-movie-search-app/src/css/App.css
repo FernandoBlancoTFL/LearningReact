@@ -1,4 +1,96 @@
 body {
+    display: flex;
+    justify-self: center;
     color: white;
     background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    width: 800px;
+}
+
+#app{
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mov-srch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mov-srch-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.mov-srch-form-input{
+    padding: 5px 10px;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.mov-srch-form-input:focus{
+    outline: none;
+    border-color: blue;
+}
+
+.mov-srch-form-btn {
+    color: black;
+    background-color: green;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mov-srch-form-btn:hover {
+    background-color: rgb(2, 154, 2);
+}
+
+.mov-srch-filter{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.mov-srch-filter input{
+    cursor: pointer;
+}
+
+.mov-movies{
+    width: 100%;
+}
+
+.movies {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    width: 100%;
+    gap: 32px;
+}
+
+.movie {
+    text-align: center;
+}
+
+.movie h3, .movie p {
+    margin: 0;
+}
+
+.movie img {
+
+    border-radius: 8px;
+    margin-top: 16px;
 }
